@@ -6,13 +6,36 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D41DCFBF2F7D8C1200A17AD1 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = D41DCFBE2F7D8C1200A17AD1 /* Auth */; };
+		D41DCFC12F7D8C1200A17AD1 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = D41DCFC02F7D8C1200A17AD1 /* Functions */; };
+		D41DCFC32F7D8C1200A17AD1 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = D41DCFC22F7D8C1200A17AD1 /* Realtime */; };
+		D41DCFC52F7D8C1200A17AD1 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = D41DCFC42F7D8C1200A17AD1 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D41DCFAF2F7D88D000A17AD1 /* Layman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A1B0024A0C100100AA1001 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Layman/Config/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		D4A1B0034A0C100100AA1001 /* Layman/Config/Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Layman/Config/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D4CE197E3006D53C00A67C13 /* Exceptions for "Layman" folder in "Layman" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Config/Layman/Config/Base.xcconfig,
+				Config/Layman/Config/Debug.xcconfig,
+			);
+			target = D41DCFAE2F7D88D000A17AD1 /* Layman */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D41DCFB12F7D88D000A17AD1 /* Layman */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D4CE197E3006D53C00A67C13 /* Exceptions for "Layman" folder in "Layman" target */,
+			);
 			path = Layman;
 			sourceTree = "<group>";
 		};
@@ -23,6 +46,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41DCFC52F7D8C1200A17AD1 /* Supabase in Frameworks */,
+				D41DCFC32F7D8C1200A17AD1 /* Realtime in Frameworks */,
+				D41DCFC12F7D8C1200A17AD1 /* Functions in Frameworks */,
+				D41DCFBF2F7D8C1200A17AD1 /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				D41DCFB12F7D88D000A17AD1 /* Layman */,
+				D4A1B0034A0C100100AA1001 /* Layman/Config/Release.xcconfig */,
 				D41DCFB02F7D88D000A17AD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +93,10 @@
 			);
 			name = Layman;
 			packageProductDependencies = (
+				D41DCFBE2F7D8C1200A17AD1 /* Auth */,
+				D41DCFC02F7D8C1200A17AD1 /* Functions */,
+				D41DCFC22F7D8C1200A17AD1 /* Realtime */,
+				D41DCFC42F7D8C1200A17AD1 /* Supabase */,
 			);
 			productName = Layman;
 			productReference = D41DCFAF2F7D88D000A17AD1 /* Layman.app */;
@@ -94,6 +126,9 @@
 			);
 			mainGroup = D41DCFA62F7D88D000A17AD1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D41DCFBD2F7D8C1200A17AD1 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D41DCFB02F7D88D000A17AD1 /* Products */;
 			projectDirPath = "";
@@ -248,6 +283,7 @@
 		};
 		D41DCFBB2F7D88D200A17AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A1B0024A0C100100AA1001 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -269,17 +305,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pankajkumarrana.Layman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D41DCFBC2F7D88D200A17AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A1B0034A0C100100AA1001 /* Layman/Config/Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,11 +342,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pankajkumarrana.Layman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -332,6 +377,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D41DCFBD2F7D8C1200A17AD1 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D41DCFBE2F7D8C1200A17AD1 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41DCFBD2F7D8C1200A17AD1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		D41DCFC02F7D8C1200A17AD1 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41DCFBD2F7D8C1200A17AD1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		D41DCFC22F7D8C1200A17AD1 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41DCFBD2F7D8C1200A17AD1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		D41DCFC42F7D8C1200A17AD1 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41DCFBD2F7D8C1200A17AD1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D41DCFA72F7D88D000A17AD1 /* Project object */;
 }
